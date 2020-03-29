@@ -1,5 +1,5 @@
 <?php
-Class Ticket extends CI_Model{
+Class Product extends CI_Model{
     function __construct(){
         parent::__construct();
     }
@@ -17,7 +17,6 @@ Class Ticket extends CI_Model{
         $sql.= 'where category_id in ('.$categories.') ';
         $ci = & get_instance();
         $que = $ci->db->query($sql);
-        //return $sql;
         return array(
             'res'=>$que->result(),'cnt'=>$que->num_rows()
         );

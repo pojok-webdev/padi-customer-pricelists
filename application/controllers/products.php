@@ -1,12 +1,12 @@
 <?php
-Class Tickets extends CI_Controller{
+Class Products extends CI_Controller{
     function __construct(){
         parent::__construct();
     }
     function index(){
-        $data['objs'] = $this->ticket->gets();
+        $data['objs'] = $this->product->gets();
         $data['categories'] = $this->service->getCategories();
-        $this->load->view('tickets/index',$data);
+        $this->load->view('products/index',$data);
     }
     function getajaxsource($objs){
         $arr = array();
@@ -23,31 +23,17 @@ Class Tickets extends CI_Controller{
         return '{"aaData": ['. implode(",",$arr).']}';
     }
     function ajaxsource(){
-        $objs = $this->ticket->gets();
+        $objs = $this->product->gets();
         echo $this->getajaxsource($objs);
     }
     function ajaxsourcebycategories(){
         $params = $this->input->post();
-        $objs = $this->ticket->getsbycategory($params['category_id']);
+        $objs = $this->product->getsbycategory($params['category_id']);
         echo $this->getajaxsource($objs);
     }
     function testgetsbycategory(){
         $params = $this->input->post();
-        echo $this->ticket->getsbycategory($params['category']);
-    }
-    function insert(){
-        $this->load->model('ticketcause');
-        $this->load->model('client');
-        $data['ticketcauses'] = $this->ticketcause->getCauses();
-        $data['clients'] = $this->client->getClients();
-        $this->load->view('ticket-insert/index',$data);
-    }
-    function save(){
-        $params = $this->input->post();
-        $mainparams = array('cause_id'=>$params['cause_id'],'ticketstart'=>$params['ticketstart'],'ticketend'=>$params['ticketend']);
-        $ticket_id = $this->ticket->save($mainparams,'ticketmains');
-        $clientparams = array('ticket_id'=>$ticket_id,'client_site_id'=>1);
-        $this->ticket->save($clientparams,'ticketclients');
+        echo $this->product->getsbycategory($params['category']);
     }
     function clients(){
         $params = $this->input->post();

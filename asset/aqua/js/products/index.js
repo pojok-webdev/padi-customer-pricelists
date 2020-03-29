@@ -1,7 +1,7 @@
 (function($){
-    tTicket = $("#tTicket").dataTable({
+    tProduct = $("#tProduct").dataTable({
         bProcessing:true,
-        sAjaxSource:'/tickets/ajaxsource',
+        sAjaxSource:'/products/ajaxsource',
         "aaSorting": [[ 0, "desc" ]],
         aoColumns: [
             { "sClass": "kdticket","asSorting": [ "desc" ]  },
@@ -15,26 +15,12 @@
         console.log("val",$(this).val());
         renew($(".productCategory:checked"),function(res){
             console.log("catetgories",res);
-            /*$.ajax({
-                url:'/tickets/testgetsbycategory',
-                data:{category:res},
-                type:'post'
-            })
-            .done(function(res){
-                console.log("Query retrieved",res);
-            })
-            .fail(function(err){
-                console.log("Fail retrieve query",err);
-            });*/
-            tTicket.fnDestroy();
-            tTicket = $("#tTicket").dataTable({
-                bDestroy:true,
+            tProduct.fnDestroy();
+            tProduct = $("#tProduct").dataTable({
                 bRetrieve:true,
-                bServerSide:true,
                 bProcessing:true,
-                sAjaxSource:'/tickets/ajaxsourcebycategories',
+                sAjaxSource:'/products/ajaxsourcebycategories',
                 sServerMethod:'post',
-                //aData:{category:res},
                 "fnServerParams": function ( aoData ) {
                     aoData.push( { "name": "category_id","value":res } );
                 },
@@ -56,5 +42,4 @@
         });
         callback("'"+favorite.join("','")+"'");
     }
-
 }(jQuery))

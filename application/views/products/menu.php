@@ -20,8 +20,8 @@
     </div>
     <ul class="navigation">            
         <li>
-            <a href="/">
-                <span class="isw-grid"></span><span class="text">Tickets</span>
+            <a href="/products">
+                <span class="isw-grid"></span><span class="text">Products</span>
             </a>
         </li>
         <?php foreach($categories['res'] as $category){?>
@@ -35,5 +35,10 @@
             </div>
         </li>
         <?php }?>
+        <li>
+            <a href="/notes">
+                <span class="isw-grid"></span><span class="text">Notes</span>
+            </a>
+        </li>
     </ul>    
 </div>
