@@ -1,10 +1,11 @@
 (function($){
     tProduct = $("#tProduct").dataTable({
         bProcessing:true,
+        bSort:true,
         sAjaxSource:'/products/ajaxsource',
         "aaSorting": [[ 0, "desc" ]],
         aoColumns: [
-            { "sClass": "kdticket","asSorting": [ "desc" ]  },
+            { "sClass": "kdticket",bSortable:true  },
             { "sClass": "name" },
             { "sClass": "cause" },
             { "sClass": "discount" },
@@ -19,6 +20,7 @@
             tProduct.fnDestroy();
             tProduct = $("#tProduct").dataTable({
                 bRetrieve:true,
+                bSort:true,
                 bProcessing:true,
                 sAjaxSource:'/products/ajaxsourcebycategories',
                 sServerMethod:'post',
@@ -27,7 +29,7 @@
                 },
                 "aaSorting": [[ 0, "desc" ]],
                 aoColumns: [
-                    { "sClass": "kdticket","asSorting": [ "desc" ]  },
+                    { "sClass": "kdticket",bSortable:true  },
                     { "sClass": "name" },
                     { "sClass": "cause" },
                     { "sClass": "discount" },

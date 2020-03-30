@@ -1,10 +1,11 @@
 (function($){
     tNote = $("#tNote").dataTable({
         bProcessing:true,
+        bSort:true,
         sAjaxSource:'/notes/ajaxsource',
         "aaSorting": [[ 0, "desc" ]],
         aoColumns: [
-            { "sClass": "kdticket","asSorting": [ "desc" ]  },
+            { "sClass": "kdticket"  },
             { "sClass": "name" },
           ]
     });

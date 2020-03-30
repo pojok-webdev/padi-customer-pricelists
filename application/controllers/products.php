@@ -14,8 +14,8 @@ Class Products extends CI_Controller{
             array_push($arr,'[
                 "<h5>'.$obj->product_id.'</h5>",
                 "<h5>'.$obj->name.'</h5>",
-                "<h5>'.$obj->price.'</h5>",
-                "<h5>'.$obj->discount.'</h5>",
+                "<h5>'.number_format($obj->price).'</h5>",
+                "<h5>'.number_format($obj->discount).'</h5>",
                 "<h5>'.$obj->description.'</h5>",
                 "<h5>'.$obj->unit.'</h5>"
               ]');
