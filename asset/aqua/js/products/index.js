@@ -13,8 +13,15 @@
             { "sClass": "ticketend" },
           ]
     });
+    $(".selectall").on("click",function(){
+        $(".productCategory").prop("checked",this.checked);
+        doRenew();
+    })
     $(".productCategory").on("click",function(){
         console.log("val",$(this).val());
+        doRenew();
+    })
+    doRenew = function(){
         renew($(".productCategory:checked"),function(res){
             console.log("catetgories",res);
             tProduct.fnDestroy();
@@ -38,7 +45,7 @@
                   ]
             });
         });
-    })
+    }
     renew = function(obj,callback){
         var favorite = [];
         $.each(obj, function(){

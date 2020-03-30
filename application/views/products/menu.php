@@ -24,6 +24,14 @@
                 <span class="isw-grid"></span><span class="text">Products</span>
             </a>
         </li>
+        <li>
+            <div class="span12">
+                <label class="checkbox inline">
+                    <input type="checkbox" checked="checked" class="selectall" /> 
+                    SELECT ALL
+                </label>
+            </div>
+        </li>
         <?php foreach($categories['res'] as $category){?>
         <li>
             <div class="span5"></div>
