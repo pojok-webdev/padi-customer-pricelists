@@ -7,6 +7,7 @@
             { "sClass": "kdticket","asSorting": [ "desc" ]  },
             { "sClass": "name" },
             { "sClass": "cause" },
+            { "sClass": "discount" },
             { "sClass": "ticketstart" },
             { "sClass": "ticketend" },
           ]
@@ -29,6 +30,7 @@
                     { "sClass": "kdticket","asSorting": [ "desc" ]  },
                     { "sClass": "name" },
                     { "sClass": "cause" },
+                    { "sClass": "discount" },
                     { "sClass": "ticketstart" },
                     { "sClass": "ticketend" },
                   ]
