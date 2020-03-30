@@ -16,7 +16,7 @@
                 <div class="span12">                    
                     <div class="head clearfix">
                         <div class="isw-grid"></div>
-                        <h1>Pricelist Layanan PadiNET</h1>
+                        <h1>Notes Layanan PadiNET</h1>
                         <ul class="buttons">
                             <li><a href="/notes/insert/" class="isw-download"></a></li>                                                        
                         </ul>                        
@@ -25,8 +25,8 @@
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tNote">
                             <thead>
                                 <tr>
-                                    <th width="5%">Kode</th>
-                                    <th width="20%">Nama</th>
+                                    <th width="5%">ID</th>
+                                    <th width="95%">Nama</th>
                                 </tr>
                             </thead>
                             <tbody>

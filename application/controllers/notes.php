@@ -12,8 +12,8 @@ Class Notes extends CI_Controller{
         $arr = array();
         foreach($objs['res'] as $obj){
             array_push($arr,'[
-                "'.$obj->id.'",
-                "'.$obj->name.'"
+                "<h5>'.$obj->id.'</h5>",
+                "<h5>'.$obj->name.'</h5>"
               ]');
         }
         return '{"aaData": ['. implode(",",$arr).']}';

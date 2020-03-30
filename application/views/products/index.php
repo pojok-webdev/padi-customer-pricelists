@@ -28,7 +28,8 @@
                                     <th width="5%">Kode</th>
                                     <th width="20%">Nama</th>
                                     <th width="10%">Harga</th>
-                                    <th width="60%">Keterangan</th>
+                                    <th width="10%">Diskon</th>
+                                    <th width="50%">Keterangan</th>
                                     <th width="5%">Unit</th>
                                 </tr>
                             </thead>

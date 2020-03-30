@@ -12,12 +12,12 @@ Class Products extends CI_Controller{
         $arr = array();
         foreach($objs['res'] as $obj){
             array_push($arr,'[
-                "'.$obj->product_id.'",
-                "'.$obj->name.'",
-                "Price:'.$obj->price.'<p>Discount:'.$obj->discount.'",
-                "'.$obj->description.'",
-                "'.$obj->unit.'",
-                "dura"
+                "<h5>'.$obj->product_id.'</h5>",
+                "<h5>'.$obj->name.'</h5>",
+                "<h5>'.$obj->price.'</h5>",
+                "<h5>'.$obj->discount.'</h5>",
+                "<h5>'.$obj->description.'</h5>",
+                "<h5>'.$obj->unit.'</h5>"
               ]');
         }
         return '{"aaData": ['. implode(",",$arr).']}';
