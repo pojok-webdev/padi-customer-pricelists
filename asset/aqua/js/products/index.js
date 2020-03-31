@@ -56,15 +56,16 @@
                     aoData.push( { "name": "category_id","value":res } );
                 },
                 "aaSorting": [[ 0, "desc" ]],
+                "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
                 aoColumns: [
                     { "sClass": "kdticket",bSortable:true  },
                     { "sClass": "name" },
                     { "sClass": "currency","bVisible":false },
-                    { "sClass": "cause" },
-                    { "sClass": "discount" },
+                    { "sClass": "currency"},
+                    { "sClass": "currency","bVisible":false },
+                    { "sClass": "currency" },
                     { "sClass": "ticketstart" },
-                    { "sClass": "ticketend" },
-                  ]
+                    { "sClass": "ticketend" }                          ]
             });
         });
     }
