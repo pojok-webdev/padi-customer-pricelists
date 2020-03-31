@@ -30,7 +30,7 @@
                                     <th class="ccurrency" width="10%">Harga</th>
                                     <th class="ccurrency" width="10%">Harga</th>
                                     <th class="ccurrency" width="10%">Diskon</th>
-                                    <th class="ccurrency" width="10%">Diskon</th>
+                                    <th class="ccurrency" width="10%">Harga Diskon</th>
                                     <th width="50%">Keterangan</th>
                                     <th width="5%">Unit</th>
                                 </tr>
