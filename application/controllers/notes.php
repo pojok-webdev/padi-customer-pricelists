@@ -12,7 +12,7 @@ Class Notes extends CI_Controller{
         $arr = array();
         foreach($objs['res'] as $obj){
             array_push($arr,'[
-                "<h5>'.$obj->id.'</h5>",
+                '.$obj->id.',
                 "<h5>'.$obj->name.'</h5>"
               ]');
         }
