@@ -8,7 +8,7 @@
             <li class="list_icon"><a href="#">&nbsp;</a></li>
         </ul>    
     </div>
-    <?php $this->load->view('notes/menu');?>
+    <?php $this->load->view('commons/menu');?>
     <div class="content">
         <?php $this->load->view('notes/breadline');?>        
         <div class="workplace">
