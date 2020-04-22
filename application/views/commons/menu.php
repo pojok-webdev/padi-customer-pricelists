@@ -19,7 +19,7 @@
         </div>
     </div>
     <ul class="navigation">
-        <li class="openable">
+        <li class="openablex">
             <a href="/products">
                 <span class="isw-grid"></span><span class="text">Products</span>
             </a>
@@ -36,7 +36,7 @@
                 </li>
             </ul>
         </li>
-        <li class="openable">
+        <li class="openablex">
             <a href="/devices">
                 <span class="isw-grid"></span><span class="text">Devices</span>
             </a>
@@ -53,7 +53,7 @@
                 </li>
             </ul>
         </li>
-        <li class="openable">
+        <li class="openablex">
             <a href="/notes">
                 <span class="isw-grid"></span><span class="text">VAS</span>
             </a>
