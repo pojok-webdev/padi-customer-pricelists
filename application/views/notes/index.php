@@ -17,9 +17,6 @@
                     <div class="head clearfix">
                         <div class="isw-grid"></div>
                         <h1>Notes Layanan PadiNET</h1>
-                        <ul class="buttons">
-                            <li><a href="/notes/insert/" class="isw-download"></a></li>                                                        
-                        </ul>                        
                     </div>
                     <div class="block-fluid table-sorting clearfix">
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tNote">

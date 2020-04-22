@@ -22,9 +22,6 @@
                     <div class="head clearfix">
                         <div class="isw-grid"></div>
                         <h1>Pricelist VAS PadiNET</h1>
-                        <ul class="buttons">
-                            <li><a href="/devices/insert/" class="isw-download"></a></li>                                                        
-                        </ul>                        
                     </div>
                     <div class="block-fluid table-sorting clearfix">
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tProduct">
