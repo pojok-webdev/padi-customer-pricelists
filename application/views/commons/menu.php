@@ -21,7 +21,7 @@
     <ul class="navigation">
         <li class="openablex">
             <a href="/products">
-                <span class="isw-grid"></span><span class="text">Products</span>
+                <span class="isw-grid"></span><span class="text">Internet</span>
             </a>
             <ul>
             <li class="active">
