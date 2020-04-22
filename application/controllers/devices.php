@@ -9,6 +9,11 @@ Class Devices extends CI_Controller{
         $data = array(
             'objs'=>$this->device->gets(),
             'categories' => $this->service->getCategories(),
+            'menuactive'=>array(
+                'productlist'=>'','productnote'=>'',
+                'devicelist'=>'active','devicenote'=>'',
+                'vaslist'=>'','vasnote'=>''
+            ),
             'breadline'=>array(
                 0=>array('url'=>'/','label'=>'Devices'),
                 1=>array('url'=>'/','label'=>'List'),

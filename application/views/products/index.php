@@ -19,7 +19,7 @@
                         <div class="isw-grid"></div>
                         <h1>Pricelist Layanan PadiNET</h1>
                         <ul class="buttons">
-                            <li><a href="#dFilter" role="button" class="isw-settings" data-toggle="modal"></a></li>
+                            <li><a href="#dFilter" role="button" class="glyphicon glyphicon-filter" data-toggle="modal"></a></li>
                         </ul>
                     </div>
                     <div class="block-fluid table-sorting clearfix">

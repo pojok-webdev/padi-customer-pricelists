@@ -4,8 +4,15 @@ Class Products extends CI_Controller{
         parent::__construct();
     }
     function index(){
-        $data['objs'] = $this->product->gets();
-        $data['categories'] = $this->service->getCategories();
+        $data = array(
+            'menuactive'=>array(
+                'productlist'=>'active','productnote'=>'',
+                'devicelist'=>'','devicenote'=>'',
+                'vaslist'=>'','vasnote'=>''
+            ),
+            'objs'=>$this->product->gets(),
+            'categories'=>$this->service->getCategories()
+        );
         $this->load->view('products/index',$data);
     }
     function getajaxsource($objs){

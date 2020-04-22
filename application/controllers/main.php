@@ -18,4 +18,7 @@ Class Main extends CI_Controller{
     function testsha1(){
         echo sha1('puji');
     }
+    function notfound(){
+        $this->load->view('commons/404.php');
+    }
 }

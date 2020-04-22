@@ -4,8 +4,15 @@ Class Notes extends CI_Controller{
         parent::__construct();
     }
     function index(){
-        $data['objs'] = $this->note->gets();
-        $data['categories'] = $this->service->getCategories();
+        $data = array(
+            'menuactive'=>array(
+                'productlist'=>'active','productnote'=>'',
+                'devicelist'=>'','devicenote'=>'',
+                'vaslist'=>'','vasnote'=>''
+            ),
+            'objs'=>$this->note->gets(),
+            'categories'=>$this->service->getCategories()
+        );
         $this->load->view('notes/index',$data);
     }
     function getajaxsource($objs){

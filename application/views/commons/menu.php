@@ -19,52 +19,52 @@
         </div>
     </div>
     <ul class="navigation">
-        <li class="openablex">
+        <li class="openable <?php echo $menuactive['productlist']?> <?php echo $menuactive['productnote']?>">
             <a href="/products">
                 <span class="isw-grid"></span><span class="text">Internet</span>
             </a>
             <ul>
-            <li class="active">
+            <li class="<?php echo $menuactive['productlist']?>">
                     <a href="/products">
-                        <span class="icon-th"></span><span class="text">Product List</span>
+                        <span class="icon-th"></span><span class="text">Internet List</span>
                     </a>                  
                 </li>
-                <li class="active">
+                <li class="<?php echo $menuactive['productnote']?>">
                     <a href="/notes">
-                        <span class="icon-th"></span><span class="text">Product Notes</span>
+                        <span class="icon-th"></span><span class="text">Internet Notes</span>
                     </a>                  
                 </li>
             </ul>
         </li>
-        <li class="openablex">
+        <li class="openable <?php echo $menuactive['devicelist']?>">
             <a href="/devices">
                 <span class="isw-grid"></span><span class="text">Devices</span>
             </a>
             <ul>
-            <li class="active">
+            <li class="<?php echo $menuactive['devicelist']?>">
                     <a href="/devices">
                         <span class="icon-th"></span><span class="text">Device List</span>
                     </a>                  
                 </li>
-                <li class="active">
-                    <a href="/devicenotes">
+                <li class="activex">
+                    <a href="/main/notfound">
                         <span class="icon-th"></span><span class="text">Device Notes</span>
                     </a>                  
                 </li>
             </ul>
         </li>
-        <li class="openablex">
+        <li class="openable <?php echo $menuactive['vaslist']?>">
             <a href="/notes">
                 <span class="isw-grid"></span><span class="text">VAS</span>
             </a>
             <ul>
-            <li class="active">
+            <li class="<?php echo $menuactive['vaslist']?>">
                     <a href="/vases">
                         <span class="icon-th"></span><span class="text">VAS List</span>
                     </a>                  
                 </li>
-                <li class="active">
-                    <a href="/vasnotes">
+                <li class="activex">
+                    <a href="/main/notfound">
                         <span class="icon-th"></span><span class="text">VAS Notes</span>
                     </a>                  
                 </li>

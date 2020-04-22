@@ -8,6 +8,11 @@ Class Vases extends CI_Controller{
         $data = array(
             'objs'=>$this->vas->gets(),
             'categories' => $this->service->getCategories(),
+            'menuactive'=>array(
+                'productlist'=>'','productnote'=>'',
+                'devicelist'=>'','devicenote'=>'',
+                'vaslist'=>'active','vasnote'=>''
+            ),
             'breadline'=>array(
                 0=>array('url'=>'/','label'=>'vass'),
                 1=>array('url'=>'/','label'=>'List'),
