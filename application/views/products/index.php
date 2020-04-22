@@ -8,6 +8,7 @@
             <li class="list_icon"><a href="#">&nbsp;</a></li>
         </ul>    
     </div>
+    <?php $this->load->view('products/filter');?>
     <?php $this->load->view('commons/menu');?>
     <div class="content">
         <?php $this->load->view('products/breadline');?>        
@@ -18,8 +19,9 @@
                         <div class="isw-grid"></div>
                         <h1>Pricelist Layanan PadiNET</h1>
                         <ul class="buttons">
-                            <li><a href="/products/insert/" class="isw-download"></a></li>                                                        
-                        </ul>                        
+                            <li><a href="#dFilter" role="button" class="isw-settings" data-toggle="modal"></a></li>
+                            <li><a href="/products/insert/" class="isw-download"></a></li>
+                        </ul>
                     </div>
                     <div class="block-fluid table-sorting clearfix">
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tProduct">

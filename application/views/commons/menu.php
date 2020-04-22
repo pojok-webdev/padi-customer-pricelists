@@ -18,40 +18,57 @@
             <span>Welcome back! PadiNET</span>
         </div>
     </div>
-    <ul class="navigation">            
-        <li>
+    <ul class="navigation">
+        <li class="openable">
             <a href="/products">
                 <span class="isw-grid"></span><span class="text">Products</span>
             </a>
+            <ul>
+            <li class="active">
+                    <a href="/products">
+                        <span class="icon-th"></span><span class="text">Product List</span>
+                    </a>                  
+                </li>
+                <li class="active">
+                    <a href="/notes">
+                        <span class="icon-th"></span><span class="text">Product Notes</span>
+                    </a>                  
+                </li>
+            </ul>
         </li>
-        <li>
-            <div class="span12">
-                <label class="checkbox inline">
-                    <input type="checkbox" checked="checked" class="selectall" /> 
-                    SELECT ALL
-                </label>
-            </div>
-        </li>
-        <?php foreach($categories['res'] as $category){?>
-        <li>
-            <div class="span5"></div>
-            <div class="span7">
-                <label class="checkbox inline">
-                    <input type="checkbox" checked="checked" value="<?php echo $category->category_id;?>" class="productCategory" /> 
-                    <?php echo $category->category_id;?>
-                </label>
-            </div>
-        </li>
-        <?php }?>
-        <li>
+        <li class="openable">
             <a href="/devices">
                 <span class="isw-grid"></span><span class="text">Devices</span>
             </a>
+            <ul>
+            <li class="active">
+                    <a href="/devices">
+                        <span class="icon-th"></span><span class="text">Device List</span>
+                    </a>                  
+                </li>
+                <li class="active">
+                    <a href="/devicenotes">
+                        <span class="icon-th"></span><span class="text">Device Notes</span>
+                    </a>                  
+                </li>
+            </ul>
         </li>
-        <li>
+        <li class="openable">
             <a href="/notes">
-                <span class="isw-grid"></span><span class="text">Notes</span>
+                <span class="isw-grid"></span><span class="text">VAS</span>
             </a>
+            <ul>
+            <li class="active">
+                    <a href="/vases">
+                        <span class="icon-th"></span><span class="text">VAS List</span>
+                    </a>                  
+                </li>
+                <li class="active">
+                    <a href="/vasnotes">
+                        <span class="icon-th"></span><span class="text">VAS Notes</span>
+                    </a>                  
+                </li>
+            </ul>
         </li>
     </ul>    
 </div>

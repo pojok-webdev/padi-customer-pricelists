@@ -76,4 +76,7 @@
         });
         callback("'"+favorite.join("','")+"'");
     }
+    $('#btnFilter').click(function(){
+        console.log('settings invoked');
+    })
 }(jQuery))

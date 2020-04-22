@@ -273,8 +273,14 @@
                         .table.images td.info > span{font-size: 11px; color: #999;}
                     
             /* ~Simple table~ */                            
-            
+            /*
+            puji
+            */
+                [class*="block"] .table tr td.yellow{background-color: #DEF92F;}
                 
+            /*
+            puji
+            */
             /* Messaging */           
             
             .messaging{padding-top: 5px;}
