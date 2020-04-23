@@ -41,9 +41,9 @@
                                     <td><?php echo $vas->kdvas;?></td>
                                     <td><?php echo $vas->name;?></td>
                                     <td><?php echo $vas->description;?></td>
-                                    <td class='<?php echo $vas->pricepadinetattr;?>'><?php echo $vas->pricepadinet;?></td>
+                                    <td class='<?php echo $vas->pricepadinetattr;?>'><?php echo $vas->padinettemp;?></td>
                                     <td class='<?php echo $vas->pricenonpadinetattr;?>'>
-                                    <?php echo $vas->pricenonpadinet;?>
+                                    <?php echo $vas->nonpadinettemp;?>
                                     </td>
                                     <td><?php echo $vas->unit;?></td>
                                 </tr>
@@ -56,5 +56,6 @@
             <div class="dr"><span></span></div>
         </div>
     </div>
+    <script src='/asset/aqua/js/vases/index.js'></script>
 </body>
 </html>
