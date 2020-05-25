@@ -7,7 +7,7 @@ Class Vases extends CI_Controller{
     function index(){
         $data = array(
             'objs'=>$this->vas->gets(),
-            'categories' => $this->service->getCategories(),
+            'categories' => $this->service->getVasCategories(),
             'menuactive'=>array(
                 'productlist'=>'','productnote'=>'',
                 'devicelist'=>'','devicenote'=>'',
@@ -16,7 +16,7 @@ Class Vases extends CI_Controller{
             'breadline'=>array(
                 0=>array('url'=>'/','label'=>'vass'),
                 1=>array('url'=>'/','label'=>'List'),
-            )
+            ),
         );
         $this->load->view('vases/index',$data);
     }
@@ -38,6 +38,11 @@ Class Vases extends CI_Controller{
     function ajaxsource(){
         $objs = $this->vas->gets();
         //echo json_encode($objs);
+        echo $this->getajaxsource($objs);
+    }
+    function ajaxsourcebycategories(){
+        $params = $this->input->post();
+        $objs = $this->vas->getsbycategory($params['id']);
         echo $this->getajaxsource($objs);
     }
     function edit(){

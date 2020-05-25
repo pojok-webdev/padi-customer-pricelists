@@ -4,9 +4,26 @@ Class Device extends CI_Model{
         parent::__construct();
     }
     function gets(){
-        $sql = 'select * from devices ';
+        $sql = 'select b.name category,a.id,a.kddevice,a.name,a.description,a.price,a.unit,a.brand ';
+        $sql.= 'from devices a ';
+        $sql.= 'left outer join devicecategories b on b.id=a.category_id ';
         $ci= & get_instance();
         $que = $ci->db->query($sql);
         return array('res'=>$que->result(),'cnt'=>$que->num_rows());
+    }
+    function getDeviceCategories(){
+        $sql = 'select * from devicecategories ';
+        $ci= & get_instance();
+        $que = $ci->db->query($sql);
+        return array('res'=>$que->result(),'cnt'=>$que->num_rows());
+    }
+    function getsbycategory($categories){
+        $sql = 'select a.id,a.kddevice,a.name,a.description,a.price,a.unit,a.brand from devices a ';
+        $sql.= 'where category_id in ('.$categories.') ';
+        $ci = & get_instance();
+        $que = $ci->db->query($sql);
+        return array(
+            'res'=>$que->result(),'cnt'=>$que->num_rows()
+        );
     }
 }

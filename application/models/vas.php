@@ -40,5 +40,14 @@ Class Vas extends CI_Model{
         $ci= & get_instance();
         $que = $ci->db->query($sql);
         return $sql;//$que->result();
-}
+    }
+    function getsbycategory($categories){
+        $sql = 'select id,kdvas,category_id,name,description,price,discount,unit from products ';
+        $sql.= 'where category_id in ('.$categories.') ';
+        $ci = & get_instance();
+        $que = $ci->db->query($sql);
+        return array(
+            'res'=>$que->result(),'cnt'=>$que->num_rows()
+        );
+    }
 }

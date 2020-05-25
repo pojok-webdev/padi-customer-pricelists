@@ -8,7 +8,7 @@ Class Devices extends CI_Controller{
     function index(){
         $data = array(
             'objs'=>$this->device->gets(),
-            'categories' => $this->service->getCategories(),
+            'categories' => $this->device->getDeviceCategories(),
             'menuactive'=>array(
                 'productlist'=>'','productnote'=>'',
                 'devicelist'=>'active','devicenote'=>'',
@@ -25,7 +25,7 @@ Class Devices extends CI_Controller{
         $arr = array();
         foreach($objs['res'] as $obj){
             array_push($arr,'[
-                "'.$obj->kdproduct.'",
+                "'.$obj->kddevice.'",
                 "'.$obj->name.'",
                 "'.$obj->description.'",
                 "'.number_format($obj->price).'",
@@ -38,6 +38,11 @@ Class Devices extends CI_Controller{
     function ajaxsource(){
         $objs = $this->device->gets();
         //echo json_encode($objs);
+        echo $this->getajaxsource($objs);
+    }
+    function ajaxsourcebycategories(){
+        $params = $this->input->post();
+        $objs = $this->device->getsbycategory($params['category_id']);
         echo $this->getajaxsource($objs);
     }
 }

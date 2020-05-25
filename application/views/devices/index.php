@@ -8,15 +8,21 @@
             <li class="list_icon"><a href="#">&nbsp;</a></li>
         </ul>    
     </div>
+    <?php $this->load->view('devices/filter');?>
     <?php $this->load->view('commons/menu');?>
     <div class="content">
-        <?php $this->load->view('commons/breadline');?>        
+        <?php $this->load->view('commons/breadline');?>
         <div class="workplace">
             <div class="row-fluid">                
                 <div class="span12">                    
                     <div class="head clearfix">
                         <div class="isw-grid"></div>
                         <h1>Pricelist Perangkat PadiNET</h1>
+                        <ul class="buttons">
+                            <li>
+                            <a href="#dFilter" role="button" title="Filter dialog" class="isw-sort" data-toggle="modal"></a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="block-fluid table-sorting clearfix">
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tProduct">

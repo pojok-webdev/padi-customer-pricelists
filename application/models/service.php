@@ -9,4 +9,10 @@ Class Service extends CI_Model{
         $que = $ci->db->query($sql);
         return array('res'=>$que->result(),'cnt'=>$que->num_rows());
     }
+    function getVasCategories(){
+        $sql = 'select id,name from vascategories ';
+        $ci = & get_instance();
+        $que = $ci->db->query($sql);
+        return array('res'=>$que->result(),'cnt'=>$que->num_rows());
+    }
 }
