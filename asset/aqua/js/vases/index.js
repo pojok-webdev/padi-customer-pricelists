@@ -35,7 +35,7 @@ doRenew = function(){
             bRetrieve:true,
             bSort:true,
             bProcessing:true,
-            sAjaxSource:'/vas/ajaxsourcebycategories',
+            sAjaxSource:'/vases/ajaxsourcebycategories',
             sServerMethod:'post',
             "fnServerParams": function ( aoData ) {
                 aoData.push( { "name": "category_id","value":res } );
@@ -43,14 +43,13 @@ doRenew = function(){
             "aaSorting": [[ 0, "desc" ]],
             "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
             aoColumns: [
-                { "sClass": "kdticket",bSortable:true  },
+                { "sClass": "kdvas",bSortable:true  },
                 { "sClass": "name" },
                 { "sClass": "currency","bVisible":false },
                 { "sClass": "currency"},
                 { "sClass": "currency","bVisible":false },
-                { "sClass": "currency" },
-                { "sClass": "ticketstart" },
-                { "sClass": "ticketend" }                          ]
+                { "sClass": "currency" }
+            ]
         });
     });
 }

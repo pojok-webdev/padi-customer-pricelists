@@ -47,15 +47,14 @@
               "aaSorting": [[ 0, "desc" ]],
               "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
               aoColumns: [
-                  { "sClass": "kdticket",bSortable:true  },
-                  { "sClass": "name" },
-                  { "sClass": "currency","bVisible":false },
-                  { "sClass": "currency"},
-                  { "sClass": "currency","bVisible":false },
-                  { "sClass": "currency" },
-                  { "sClass": "ticketstart" },
-                  { "sClass": "ticketend" }                          ]
-          });
+                { "sClass": "kdticket",bSortable:true  },
+                { "sClass": "name" },
+                { "sClass": "currency"},
+                { "sClass": "currency" },
+                { "sClass": "ticketstart" },
+                { "sClass": "ticketend" }
+                ]
+              });
       });
   }
   renew = function(obj,callback){
@@ -65,5 +64,8 @@
       });
       callback("'"+favorite.join("','")+"'");
   }
-
+    $('.selectall').click(function(){
+        $(".productCategory").prop("checked",this.checked);
+        doRenew();
+    });
 }(jQuery))
