@@ -50,7 +50,7 @@ doRenew = function(){
                 { "sClass": "kdvas",bSortable:true  },
                 { "sClass": "name" },
                 { "sClass": "currency","bVisible":true },
-                { },
+                {},
                 { "bVisible":true },
                 { "sClass": "currency" }
             ]

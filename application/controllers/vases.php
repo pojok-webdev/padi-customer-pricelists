@@ -28,8 +28,8 @@ Class Vases extends CI_Controller{
                 "'.$obj->kdvas.'",
                 "'.$obj->name.'",
                 "'.$obj->description.'",
-                "'.$obj->pricepadinet.'",
-                "'.$obj->pricenonpadinet.'",
+                "'.$obj->padinettemp.'",
+                "'.$obj->nonpadinettemp.'",
                 "'.$obj->unit.'"
               ]');
         }
