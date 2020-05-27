@@ -28,6 +28,7 @@
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tProduct">
                             <thead>
                                 <tr>
+                                    <th>Kategori</th>
                                     <th width="15%">Kode</th>
                                     <th width="20%">Nama</th>
                                     <th width="45%">Keterangan</th>

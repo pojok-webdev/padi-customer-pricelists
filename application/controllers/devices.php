@@ -25,6 +25,7 @@ Class Devices extends CI_Controller{
         $arr = array();
         foreach($objs['res'] as $obj){
             array_push($arr,'[
+                "'.$obj->category.'",
                 "'.$obj->kddevice.'",
                 "'.$obj->name.'",
                 "'.$obj->description.'",

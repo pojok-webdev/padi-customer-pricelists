@@ -1,5 +1,7 @@
 (function($){
-    tProduct = $("#tProduct").dataTable();
+    tProduct = $("#tProduct").dataTable({
+        "sPaginationType":"full_numbers",
+    });
 }(jQuery))
 $(".selectall").on("click",function(){
     $(".productCategory").prop("checked",this.checked);
@@ -36,13 +38,15 @@ doRenew = function(){
             bSort:true,
             bProcessing:true,
             sAjaxSource:'/vases/ajaxsourcebycategories',
+            "sPaginationType":"full_numbers",
             sServerMethod:'post',
             "fnServerParams": function ( aoData ) {
                 aoData.push( { "name": "category_id","value":res } );
             },
             "aaSorting": [[ 0, "desc" ]],
-            "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
+            "aoColumnDefs":[ { 'aDataSort':[3], 'aTargets': [4] },{ 'aDataSort':[5], 'aTargets': [6] },],
             aoColumns: [
+                { "sClass": "category",bSortable:true},
                 { "sClass": "kdvas",bSortable:true  },
                 { "sClass": "name" },
                 { "sClass": "currency","bVisible":false },

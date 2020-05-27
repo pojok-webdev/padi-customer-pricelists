@@ -18,7 +18,8 @@ Class Device extends CI_Model{
         return array('res'=>$que->result(),'cnt'=>$que->num_rows());
     }
     function getsbycategory($categories){
-        $sql = 'select a.id,a.kddevice,a.name,a.description,a.price,a.unit,a.brand from devices a ';
+        $sql = 'select b.name category,a.id,a.kddevice,a.name,a.description,a.price,a.unit,a.brand from devices a ';
+        $sql.= 'left outer join devicecategories b on b.id=a.category_id ';
         $sql.= 'where category_id in ('.$categories.') ';
         $ci = & get_instance();
         $que = $ci->db->query($sql);

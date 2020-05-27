@@ -4,15 +4,17 @@
         bSort:true,
         sAjaxSource:'/devices/ajaxsource',
         "aaSorting": [[ 0, "desc" ]],
-        "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
+        "sPaginationType":"full_numbers",
+        //"aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
         aoColumns: [
-            { "sClass": "kdticket",bSortable:true  },
-            { "sClass": "name" },
-            { "sClass": "currency"},
-            { "sClass": "currency" },
-            { "sClass": "ticketstart" },
-            { "sClass": "ticketend" }
-          ]
+          { "sClass": "category",bSortable:true  },
+          { "sClass": "kdticket",bSortable:true  },
+          { "sClass": "name" },
+          { "sClass": "currency"},
+          { "sClass": "currency" },
+          { "sClass": "ticketstart" },
+          { "sClass": "ticketend" }
+        ]
     });
     function currencyFormatDE(num) {
         return (
@@ -44,9 +46,11 @@
               "fnServerParams": function ( aoData ) {
                   aoData.push( { "name": "category_id","value":res } );
               },
+              "sPaginationType":"full_numbers",
               "aaSorting": [[ 0, "desc" ]],
-              "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
+              //"aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
               aoColumns: [
+                { "sClass": "category",bSortable:true  },
                 { "sClass": "kdticket",bSortable:true  },
                 { "sClass": "name" },
                 { "sClass": "currency"},

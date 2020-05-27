@@ -24,6 +24,7 @@ Class Vases extends CI_Controller{
         $arr = array();
         foreach($objs['res'] as $obj){
             array_push($arr,'[
+                "'.$obj->category.'",
                 "'.$obj->kdvas.'",
                 "'.$obj->name.'",
                 "'.$obj->description.'",

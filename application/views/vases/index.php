@@ -33,6 +33,7 @@
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tProduct">
                             <thead>
                                 <tr>
+                                    <th>Category</th>
                                     <th width="15%">Kode</th>
                                     <th width="20%">Name</th>
                                     <th></th>
@@ -44,6 +45,7 @@
                             <tbody>
                             <?php foreach($objs['res'] as $vas){?>
                                 <tr>
+                                    <td><?php echo $vas->category;?></td>
                                     <td><?php echo $vas->kdvas;?></td>
                                     <td><?php echo $vas->name;?></td>
                                     <td><?php echo $vas->description;?></td>

@@ -4,14 +4,24 @@ Class Vas extends CI_Model{
         parent::__construct();
     }
     function gets(){
-        $sql = 'select * from vases ';
+        $sql = 'select b.name category,a.kdvas,a.name,a.description, ';
+        $sql.= 'a.padinettemp,a.nonpadinettemp,';
+        $sql.= 'a.pricepadinet,a.pricepadinetattr,';
+        $sql.= 'a.pricenonpadinet,a.pricepadinetattr,a.unit ';
+        $sql.= 'from vases a ';
+        $sql.= 'left outer join vascategories b on b.id=a.category_id ';
         $ci= & get_instance();
         $que = $ci->db->query($sql);
         return array('res'=>$que->result(),'cnt'=>$que->num_rows());
     }
     function getbyid($id){
-        $sql = 'select * from vases ';
-        $sql.= 'where id='.$id.'';
+        $sql = 'select b.name category,a.kdvas,a.name,a.description, ';
+        $sql.= 'a.padinettemp,a.nonpadinettemp,';
+        $sql.= 'a.pricepadinet,a.pricepadinetattr,';
+        $sql.= 'a.pricenonpadinet,a.pricepadinetattr,a.unit ';
+        $sql.= 'from vases a ';
+        $sql.= 'left outer join vascategories b on b.id=a.category_id ';
+        $sql.= 'where a.id='.$id.'';
         $ci= & get_instance();
         $que = $ci->db->query($sql);
         return array('res'=>$que->result(),'cnt'=>$que->num_rows());
@@ -42,8 +52,13 @@ Class Vas extends CI_Model{
         return $sql;//$que->result();
     }
     function getsbycategory($categories){
-        $sql = 'select kdvas,category_id,name,description,pricepadinet,pricenonpadinet,unit from vases ';
-        $sql.= 'where category_id in ('.$categories.') ';
+        $sql = 'select b.name category,a.category_id,a.kdvas,a.name,a.description, ';
+        $sql.= 'a.padinettemp,a.nonpadinettemp,';
+        $sql.= 'a.pricepadinet,a.pricepadinetattr,';
+        $sql.= 'a.pricenonpadinet,a.pricepadinetattr,a.unit ';
+        $sql.= 'from vases a ';
+        $sql.= 'left outer join vascategories b on b.id=a.category_id ';
+        $sql.= 'where a.category_id in ('.$categories.') ';
         $ci = & get_instance();
         $que = $ci->db->query($sql);
         return array(
