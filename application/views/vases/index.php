@@ -51,7 +51,7 @@
                                     <td><?php echo $vas->description;?></td>
                                     <td class='<?php echo $vas->pricepadinetattr;?>'><?php echo $vas->padinettemp;?></td>
                                     <td class='<?php echo $vas->pricenonpadinetattr;?>'>
-                                    <?php echo $vas->nonpadinettemp;?>
+                                        <?php echo $vas->nonpadinettemp;?>
                                     </td>
                                     <td><?php echo $vas->unit;?></td>
                                 </tr>

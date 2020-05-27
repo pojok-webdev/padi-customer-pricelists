@@ -7,7 +7,7 @@ Class Vas extends CI_Model{
         $sql = 'select b.name category,a.kdvas,a.name,a.description, ';
         $sql.= 'a.padinettemp,a.nonpadinettemp,';
         $sql.= 'a.pricepadinet,a.pricepadinetattr,';
-        $sql.= 'a.pricenonpadinet,a.pricepadinetattr,a.unit ';
+        $sql.= 'a.pricenonpadinet,a.pricenonpadinetattr,a.unit ';
         $sql.= 'from vases a ';
         $sql.= 'left outer join vascategories b on b.id=a.category_id ';
         $ci= & get_instance();
@@ -18,7 +18,7 @@ Class Vas extends CI_Model{
         $sql = 'select b.name category,a.kdvas,a.name,a.description, ';
         $sql.= 'a.padinettemp,a.nonpadinettemp,';
         $sql.= 'a.pricepadinet,a.pricepadinetattr,';
-        $sql.= 'a.pricenonpadinet,a.pricepadinetattr,a.unit ';
+        $sql.= 'a.pricenonpadinet,a.pricenonpadinetattr,a.unit ';
         $sql.= 'from vases a ';
         $sql.= 'left outer join vascategories b on b.id=a.category_id ';
         $sql.= 'where a.id='.$id.'';
@@ -55,7 +55,7 @@ Class Vas extends CI_Model{
         $sql = 'select b.name category,a.category_id,a.kdvas,a.name,a.description, ';
         $sql.= 'a.padinettemp,a.nonpadinettemp,';
         $sql.= 'a.pricepadinet,a.pricepadinetattr,';
-        $sql.= 'a.pricenonpadinet,a.pricepadinetattr,a.unit ';
+        $sql.= 'a.pricenonpadinet,a.pricenonpadinetattr,a.unit ';
         $sql.= 'from vases a ';
         $sql.= 'left outer join vascategories b on b.id=a.category_id ';
         $sql.= 'where a.category_id in ('.$categories.') ';

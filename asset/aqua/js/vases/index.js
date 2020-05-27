@@ -49,9 +49,9 @@ doRenew = function(){
                 { "sClass": "category",bSortable:true},
                 { "sClass": "kdvas",bSortable:true  },
                 { "sClass": "name" },
-                { "sClass": "currency","bVisible":false },
-                { "sClass": "currency"},
-                { "sClass": "currency","bVisible":false },
+                { "sClass": "currency","bVisible":true },
+                { },
+                { "bVisible":true },
                 { "sClass": "currency" }
             ]
         });
