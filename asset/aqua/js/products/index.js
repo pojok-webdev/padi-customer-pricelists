@@ -3,6 +3,7 @@
         bProcessing:true,
         bSort:true,
         sAjaxSource:'/products/ajaxsource',
+        "sPaginationType":"full_numbers",
         "aaSorting": [[ 0, "desc" ]],
         "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
         aoColumns: [
@@ -51,6 +52,7 @@
                 bSort:true,
                 bProcessing:true,
                 sAjaxSource:'/products/ajaxsourcebycategories',
+                "sPaginationType":"full_numbers",
                 sServerMethod:'post',
                 "fnServerParams": function ( aoData ) {
                     aoData.push( { "name": "category_id","value":res } );
