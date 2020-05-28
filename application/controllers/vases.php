@@ -26,9 +26,11 @@ Class Vases extends CI_Controller{
             array_push($arr,'[
                 "'.$obj->category.'",
                 "'.$obj->kdvas.'",
-                "'.$obj->name.'",
-                "'.$obj->description.'",
+                '.json_encode($obj->name).',
+                '.json_encode($obj->description).',
+                "'.$obj->pricepadinetattr.'",
                 "'.$obj->padinettemp.'",
+                "'.$obj->pricenonpadinetattr.'",
                 "'.$obj->nonpadinettemp.'",
                 "'.$obj->unit.'"
               ]');
@@ -43,7 +45,7 @@ Class Vases extends CI_Controller{
     function ajaxsourcebycategories(){
         $params = $this->input->post();
         $objs = $this->vas->getsbycategory($params['category_id']);
-        //$objs = $this->vas->getsbycategory(2);
+//        $objs = $this->vas->getsbycategory($this->uri->segment(3));
         echo $this->getajaxsource($objs);
     }
     function edit(){

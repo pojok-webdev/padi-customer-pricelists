@@ -37,7 +37,9 @@
                                     <th width="15%">Kode</th>
                                     <th width="20%">Name</th>
                                     <th></th>
+                                    <th></th>
                                     <th class="ccurrency" width="10%">Price PadiNET</th>
+                                    <th></th>
                                     <th width="5%">Price Non PadiNET</th>
                                     <th class="ccurrency" width="10%">Unit</th>
                                 </tr>
@@ -49,17 +51,17 @@
                                     <td><?php echo $vas->kdvas;?></td>
                                     <td><?php echo $vas->name;?></td>
                                     <td><?php echo $vas->description;?></td>
+                                    <td><?php echo $vas->pricepadinetattr;?></td>
                                     <td class='<?php echo $vas->pricepadinetattr;?>'><?php echo $vas->padinettemp;?></td>
-                                    <td class='<?php echo $vas->pricenonpadinetattr;?>'>
-                                        <?php echo $vas->nonpadinettemp;?>
-                                    </td>
+                                    <td><?php echo $vas->pricenonpadinetattr;?></td>
+                                    <td class='<?php echo $vas->pricenonpadinetattr;?>'><?php echo $vas->nonpadinettemp;?></td>
                                     <td><?php echo $vas->unit;?></td>
                                 </tr>
                             <?php }?>
                             </tbody>
                         </table>
                     </div>
-                </div>                                
+                </div>
             </div>            
             <div class="dr"><span></span></div>
         </div>
