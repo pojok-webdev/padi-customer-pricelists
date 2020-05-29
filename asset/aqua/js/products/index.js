@@ -7,14 +7,14 @@
         "aaSorting": [[ 0, "desc" ]],
         "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
         aoColumns: [
-            { "sClass": "kdticket",bSortable:true  },
-            { "sClass": "name" },
-            { "sClass": "currency","bVisible":false },
-            { "sClass": "currency"},
-            { "sClass": "currency","bVisible":false },
-            { "sClass": "currency" },
-            { "sClass": "ticketstart" },
-            { "sClass": "ticketend" }
+            { "sClass": "kdticket",bSortable:true,sWidth:"5%"  },
+            { "sClass": "name",sWidth:"20%" },
+            { "sClass": "currency","bVisible":false,sWidth:"10%" },
+            { "sClass": "currency",sWidth:"10%"},
+            { "sClass": "currency","bVisible":false,sWidth:"10%" },
+            { "sClass": "currency",sWidth:"10%" },
+            { "sClass": "ticketstart",sWidth:"50%" },
+            { "sClass": "ticketend",sWidth:"5%" }
           ]
     });
     $(".selectall").on("click",function(){

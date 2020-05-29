@@ -7,14 +7,14 @@
         ],
         aoColumns: [
             { "sClass": "category",bSortable:true},
-            { "sClass": "kdvas",bSortable:true  },
-            { "sClass": "name" },
+            { "sClass": "kdvas",bSortable:true,sWidth:"15%"  },
+            { "sClass": "name",sWidth:"20%" },
             { "sClass": "currency","bVisible":true },
             { "sClass": "padiattr","bVisible":false },
-            {},
+            {sWidth:"10%"},
             { "sClass": "nonpadiattr","bVisible":false },
-            { "bVisible":true },
-            { "sClass": "currency" }
+            { "bVisible":true,sWidth:"5%" },
+            { "sClass": "currency",sWidth:"10%" }
         ],
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
             /* Append the grade to the default row class name */
@@ -107,8 +107,8 @@ rebuild = function(obj,callback){
                 //console.log("Should be invoked");
                 $(nRow).find('td:eq(7)').css('background-color','yellow')
             };
-            setCellColor(nRow,{src:4,target:4},function(x){
-                setCellColor(x,{src:6,target:5},function(y){
+            setCellColor({row:nRow,src:4,target:4},function(x){
+                setCellColor({row:x,src:6,target:5},function(y){
                     return y;
                 })
 //                return x;
@@ -123,17 +123,17 @@ rebuild = function(obj,callback){
     });
 callback(tProduct);
 }
-setCellColor = function(nRow,obj,callback){
-    var data = $('#tProduct').dataTable().fnGetData(nRow);
+setCellColor = function(obj,callback){
+    var data = $('#tProduct').dataTable().fnGetData(obj.row);
     if(data[obj.src]=='yellow'){
         console.log("It Should be invoked",obj);
         console.log("Color",data[obj.src]);
         //$(nRow).find('td:eq(5)').css('background-color', 'yellow');
-        $(nRow).find('td:eq('+obj.target+')').css('background-color','yellow');
-        callback(nRow);
+        $(obj.row).find('td:eq('+obj.target+')').css('background-color','yellow');
+        callback(obj.row);
     }else{
-        $(nRow).find('td:eq('+obj.target+')').css('background-color','#FFF');
-        callback(nRow);
+        $(obj.row).find('td:eq('+obj.target+')').css('background-color','#FFF');
+        callback(obj.row);
     }
 
 }
