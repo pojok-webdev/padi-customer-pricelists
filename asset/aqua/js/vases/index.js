@@ -95,54 +95,47 @@ rebuild = function(obj,callback){
             { "sClass": "currency" }
         ],
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
-            //console.log('aData',$('#tProduct tbody tr td:nth-child(4)').text());
-            //console.log('fbGetdata',iDisplayIndex,tProduct.fnGetData(nRow));
-            //console.log('fbGetdata A',iDisplayIndex,tProduct.fnGetData(nRow)[4]);
-            //console.log('fbGetdata B',iDisplayIndex,tProduct.fnGetData(nRow)[6]);
+            x = $(nRow).find('td:eq(2)').text();
+            y = $(nRow).find('td:eq(4)').text();
 
-            //console.log('nRow',$('nRow'));
-            x = $(nRow).find('td:eq(4)').text();
-            //console.log("X",x);
-            y = $(nRow).find('td:eq(6)').text();
-            //console.log("X",y);
-            
-            /*
-            if(tProduct.fnGetData(nRow)[4]=='yellow'){
-                console.log('hihi',$(nRow).find('td:eq(5)'));
-                $(nRow).find('td:eq(5)').css('background-color', 'yellow');
-            }
-            if(tProduct.fnGetData(nRow)[6]=='yellow'){
-                console.log('hehe',$(nRow).find('td:eq(7)'));
-                $(nRow).find('td:eq(7)').css('background-color', 'yellow');
-            }
-            */
-            /*setCellColor(nRow,{target:'td:eq:(5)',id:4},function(res){
-                setCellColor(res,{target:'td:eq:(7)',id:6},function(resRow){
-                    //console.log('haszil',resRow);
-                    return resRow;
+            //var row = $(this).closest('tr');
+            var data = $('#tProduct').dataTable().fnGetData(nRow);
+            if(data[4]=='yellow'){
+                $(nRow).find('td:eq(5)').css('background-color','yellow')
+            };
+            if(data[6]=='yellow'){
+                //console.log("Should be invoked");
+                $(nRow).find('td:eq(7)').css('background-color','yellow')
+            };
+            setCellColor(nRow,{src:4,target:4},function(x){
+                setCellColor(x,{src:6,target:5},function(y){
+                    return y;
                 })
-                    //return res;
-            })*/
+//                return x;
+            });
+              //$(nRow).find('td:eq(5)').css('background-color', 'yellow');
+
+
+          //  console.log(data[6]);
+
             //return nRow;
         },    
     });
 callback(tProduct);
 }
 setCellColor = function(nRow,obj,callback){
-    //console.log("OBJ Got",obj);
-    if(tProduct.fnGetData(nRow)[obj.id]==='yellow'){
-        //console.log('hihi',$(nRow).find(obj.target));
-        callback($(nRow).find(obj.target).css('background-color', 'yellow'));
-        //callback(obj.nRow);
+    var data = $('#tProduct').dataTable().fnGetData(nRow);
+    if(data[obj.src]=='yellow'){
+        console.log("It Should be invoked",obj);
+        console.log("Color",data[obj.src]);
+        //$(nRow).find('td:eq(5)').css('background-color', 'yellow');
+        $(nRow).find('td:eq('+obj.target+')').css('background-color','yellow');
+        callback(nRow);
     }else{
+        $(nRow).find('td:eq('+obj.target+')').css('background-color','#FFF');
         callback(nRow);
     }
-    /*
-    if(tProduct.fnGetData(nRow)[6]=='yellow'){
-        console.log('hehe',$(nRow).find('td:eq(7)'));
-        $(nRow).find('td:eq(7)').css('background-color', 'yellow');
-    }*/
-    
+
 }
 renew = function(obj,callback){
     var favorite = [];
