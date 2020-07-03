@@ -21,6 +21,28 @@ Class Devices extends CI_Controller{
         );
         $this->load->view('devices/index',$data);
     }
+    function edit(){
+        $data = array(
+            'obj'=>$this->device->get($this->uri->segment(3)),
+            'categories' => $this->device->getDeviceCategories(),
+            'menuactive'=>array(
+                'productlist'=>'','productnote'=>'',
+                'devicelist'=>'active','devicenote'=>'',
+                'vaslist'=>'','vasnote'=>''
+            ),
+            'breadline'=>array(
+                0=>array('url'=>'/','label'=>'Devices'),
+                1=>array('url'=>'/','label'=>'Edit'),
+            )
+        );
+        $this->load->view('devices/edit',$data);
+    }
+    function update(){
+        $params = $this->input->post();
+        print_r($params);
+        $this->load->model('device');
+        echo $this->device->update($params);
+    }
     function getajaxsource($objs){
         $arr = array();
         foreach($objs['res'] as $obj){
