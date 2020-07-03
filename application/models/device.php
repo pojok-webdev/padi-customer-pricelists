@@ -39,7 +39,7 @@ Class Device extends CI_Model{
     }
     function update($params){
         $sql = 'update devices set ';
-        $sql.= 'shownprice="'.$params['shownprice'].'",unit="'.$params['unit'].'",brand="'.$params['brand'].'" ';
+        $sql.= 'shownprice="'.$params['shownprice'].'",unit="'.$params['unit'].'",brand="'.$params['brand'].'",description="'.$params['description'].'" ';
         $sql.= 'where id='.$params['id']. '';
         $ci= & get_instance();
         $que = $ci->db->query($sql);
