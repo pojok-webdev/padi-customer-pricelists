@@ -378,7 +378,7 @@
                         </div> 
                         <div class="row-form clearfix">
                             <div class="span3">Description:</div>
-                            <div class="span9"><textarea name="description"> <?php echo $obj->kddevice;?></textarea></div>
+                            <div class="span9"><textarea name="description"> <?php echo $obj->description;?></textarea></div>
                         </div>                        
                         <div class="row-form clearfix">
                             <div class="span3">Price:</div>
