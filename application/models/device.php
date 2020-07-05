@@ -4,7 +4,7 @@ Class Device extends CI_Model{
         parent::__construct();
     }
     function gets(){
-        $sql = 'select b.name category,a.id,a.kddevice,a.name,a.description,a.price,a.unit,a.brand ';
+        $sql = 'select b.name category,a.id,a.kddevice,a.name,a.description,a.price,a.shownprice,a.unit,a.brand ';
         $sql.= 'from devices a ';
         $sql.= 'left outer join devicecategories b on b.id=a.category_id ';
         $ci= & get_instance();
