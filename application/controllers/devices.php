@@ -51,7 +51,7 @@ Class Devices extends CI_Controller{
                 "'.$obj->kddevice.'",
                 "'.$obj->name.'",
                 "'.$obj->description.'",
-                "'.number_format($obj->shownprice).'",
+                "'.$obj->shownprice.'",
                 "'.$obj->unit.'",
                 "'.$obj->brand.'"
               ]');
