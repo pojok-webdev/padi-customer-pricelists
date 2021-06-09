@@ -8,7 +8,8 @@ Class Notes extends CI_Controller{
             'menuactive'=>array(
                 'productlist'=>'active','productnote'=>'',
                 'devicelist'=>'','devicenote'=>'',
-                'vaslist'=>'','vasnote'=>''
+                'vaslist'=>'','vasnote'=>'',
+                'philoslist'=>'','philosnote'=>''
             ),
             'objs'=>$this->note->gets(),
             'categories'=>$this->service->getCategories()

@@ -61,14 +61,31 @@
             <li class="<?php echo $menuactive['vaslist']?>">
                     <a href="/vases">
                         <span class="icon-th"></span><span class="text">VAS List</span>
-                    </a>                  
+                    </a>
                 </li>
                 <li class="activex">
                     <a href="/main/notfound">
                         <span class="icon-th"></span><span class="text">VAS Notes</span>
-                    </a>                  
+                    </a>
                 </li>
             </ul>
         </li>
-    </ul>    
+        <li class="openable <?php echo $menuactive['philoslist']?>">
+            <a href="/notes">
+                <span class="isw-grid"></span><span class="text">Philo</span>
+            </a>
+            <ul>
+            <li class="<?php echo $menuactive['philoslist']?>">
+                    <a href="/philos">
+                        <span class="icon-th"></span><span class="text">Philo List</span>
+                    </a>
+                </li>
+                <li class="activex">
+                    <a href="/main/notfound">
+                        <span class="icon-th"></span><span class="text">Philo Notes</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div>

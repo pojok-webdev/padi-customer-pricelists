@@ -12,7 +12,8 @@ Class Devices extends CI_Controller{
             'menuactive'=>array(
                 'productlist'=>'','productnote'=>'',
                 'devicelist'=>'active','devicenote'=>'',
-                'vaslist'=>'','vasnote'=>''
+                'vaslist'=>'','vasnote'=>'',
+                'philoslist'=>'','philosnote'=>''
             ),
             'breadline'=>array(
                 0=>array('url'=>'/','label'=>'Devices'),

@@ -14,5 +14,5 @@
 	$autoload['config'] = array();
 	$autoload['language'] = array();
 	$autoload['model'] = array(
-		'product','service','note'
+		'product','service','note','philo'
 	);

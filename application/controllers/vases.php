@@ -11,7 +11,8 @@ Class Vases extends CI_Controller{
             'menuactive'=>array(
                 'productlist'=>'','productnote'=>'',
                 'devicelist'=>'','devicenote'=>'',
-                'vaslist'=>'active','vasnote'=>''
+                'vaslist'=>'active','vasnote'=>'',
+                'philoslist'=>'','philosnote'=>''
             ),
             'breadline'=>array(
                 0=>array('url'=>'/','label'=>'vass'),

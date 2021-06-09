@@ -1,26 +1,26 @@
 <?php
-Class Products extends CI_Controller{
+Class Philos extends CI_Controller{
     function __construct(){
         parent::__construct();
     }
     function index(){
         $data = array(
             'menuactive'=>array(
-                'productlist'=>'active','productnote'=>'',
+                'productlist'=>'','productnote'=>'',
                 'devicelist'=>'','devicenote'=>'',
                 'vaslist'=>'','vasnote'=>'',
-                'philoslist'=>'','philosnote'=>''
+                'philoslist'=>'active','philosnote'=>''
             ),
-            'objs'=>$this->product->gets(),
+            'objs'=>$this->philo->gets(),
             'categories'=>$this->service->getCategories()
         );
-        $this->load->view('products/index',$data);
+        $this->load->view('philos/index',$data);
     }
     function getajaxsource($objs){
         $arr = array();
         foreach($objs['res'] as $obj){
             array_push($arr,'[
-                "'.$obj->product_id.'",
+                "'.$obj->philo_id.'",
                 "'.$obj->name.'",
                 '.$obj->price.',
                 "'.number_format($obj->price).'",
@@ -33,17 +33,17 @@ Class Products extends CI_Controller{
         return '{"aaData": ['. implode(",",$arr).']}';
     }
     function ajaxsource(){
-        $objs = $this->product->gets();
+        $objs = $this->philo->gets();
         echo $this->getajaxsource($objs);
     }
     function ajaxsourcebycategories(){
         $params = $this->input->post();
-        $objs = $this->product->getsbycategory($params['category_id']);
+        $objs = $this->philo->getsbycategory($params['category_id']);
         echo $this->getajaxsource($objs);
     }
     function testgetsbycategory(){
         $params = $this->input->post();
-        echo $this->product->getsbycategory($params['category']);
+        echo $this->philo->getsbycategory($params['category']);
     }
     function clients(){
         $params = $this->input->post();
