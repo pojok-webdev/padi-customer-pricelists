@@ -20,6 +20,7 @@ Class Philos extends CI_Controller{
         $arr = array();
         foreach($objs['res'] as $obj){
             array_push($arr,'[
+                '.$obj->id.',
                 "'.$obj->philo_id.'",
                 "'.$obj->name.'",
                 '.$obj->price.',

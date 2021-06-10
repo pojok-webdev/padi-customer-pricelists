@@ -28,6 +28,7 @@
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tPhilo">
                             <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th width="5%">Kode</th>
                                     <th width="20%">Nama</th>
                                     <th class="ccurrency" width="10%">Harga</th>

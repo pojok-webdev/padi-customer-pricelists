@@ -4,9 +4,10 @@
         bSort:true,
         sAjaxSource:'/philos/ajaxsource',
         "sPaginationType":"full_numbers",
-        "aaSorting": [[ 0, "desc" ]],
+        "aaSorting": [[ 0, "asc" ]],
         "aoColumnDefs":[ { 'aDataSort':[2], 'aTargets': [3] },{ 'aDataSort':[4], 'aTargets': [5] },],
         aoColumns: [
+            {"sClass":"id",bVisible:false},
             { "sClass": "kdticket",bSortable:true,sWidth:"5%"  },
             { "sClass": "name",sWidth:"20%" },
             { "sClass": "currency","bVisible":false,sWidth:"10%" },
