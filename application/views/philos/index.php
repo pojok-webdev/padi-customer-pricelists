@@ -18,11 +18,6 @@
                     <div class="head clearfix">
                         <div class="isw-grid"></div>
                         <h1>Pricelist Philo PadiNET</h1>
-                        <ul class="buttons">
-                            <li>
-                            <a href="#dFilter" role="button" title="Filter dialog" class="isw-sort" data-toggle="modal"></a>
-                            </li>
-                        </ul>
                     </div>
                     <div class="block-fluid table-sorting clearfix">
                         <table cellpadding="0" cellspacing="0" width="100%" class="table" id="tPhilo">
